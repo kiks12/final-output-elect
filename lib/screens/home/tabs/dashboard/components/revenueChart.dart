@@ -254,7 +254,7 @@ class _RevenueChartState extends State<RevenueChart> {
                   children: [
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.white,
+                        backgroundColor: Colors.white,
                       ),
                       onPressed: () {},
                       child: DropdownButton<String>(

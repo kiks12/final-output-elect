@@ -511,8 +511,7 @@ class _TransactionScreenHeaderState extends State<TransactionScreenHeader> {
                     padding: const EdgeInsets.fromLTRB(0, 1, 10, 1),
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.white,
-                        onPrimary: Colors.blueGrey,
+                        foregroundColor: Colors.blueGrey, backgroundColor: Colors.white,
                       ),
                       onPressed: () {},
                       child: DropdownButton<String>(
@@ -540,8 +539,7 @@ class _TransactionScreenHeaderState extends State<TransactionScreenHeader> {
                           padding: const EdgeInsets.fromLTRB(0, 1, 10, 1),
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              primary: Colors.white,
-                              onPrimary: Colors.blueGrey,
+                              foregroundColor: Colors.blueGrey, backgroundColor: Colors.white,
                             ),
                             onPressed: () {},
                             child: DropdownButton<String>(
@@ -570,8 +568,7 @@ class _TransactionScreenHeaderState extends State<TransactionScreenHeader> {
                           padding: const EdgeInsets.fromLTRB(0, 1, 10, 1),
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              primary: Colors.white,
-                              onPrimary: Colors.blueGrey,
+                              foregroundColor: Colors.blueGrey, backgroundColor: Colors.white,
                             ),
                             onPressed: () {},
                             child: DropdownButton<String>(
@@ -600,8 +597,7 @@ class _TransactionScreenHeaderState extends State<TransactionScreenHeader> {
                           padding: const EdgeInsets.fromLTRB(0, 1, 10, 1),
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              primary: Colors.white,
-                              onPrimary: Colors.blueGrey,
+                              foregroundColor: Colors.blueGrey, backgroundColor: Colors.white,
                             ),
                             onPressed: () {},
                             child: DropdownButton<String>(
@@ -628,8 +624,7 @@ class _TransactionScreenHeaderState extends State<TransactionScreenHeader> {
                   widget.dropdownValue == 'Specific Date'
                       ? ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            primary: Colors.white,
-                            onPrimary: Colors.blueGrey,
+                            foregroundColor: Colors.blueGrey, backgroundColor: Colors.white,
                           ),
                           onPressed: () => widget.selectDate(context),
                           child: const Padding(
@@ -657,8 +652,7 @@ class _TransactionScreenHeaderState extends State<TransactionScreenHeader> {
                     padding: const EdgeInsets.symmetric(horizontal: 10),
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.white,
-                        onPrimary: Colors.blueGrey,
+                        foregroundColor: Colors.blueGrey, backgroundColor: Colors.white,
                       ),
                       onPressed: widget.refresh,
                       child: const Padding(
@@ -670,8 +664,7 @@ class _TransactionScreenHeaderState extends State<TransactionScreenHeader> {
                   ),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.red,
-                      onPrimary: Colors.white,
+                      foregroundColor: Colors.white, backgroundColor: Colors.red,
                     ),
                     onPressed: widget.deleteAll,
                     child: const Padding(

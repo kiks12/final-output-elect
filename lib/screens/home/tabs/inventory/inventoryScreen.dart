@@ -299,8 +299,7 @@ class _InventoryScreenHeaderState extends State<InventoryScreenHeader> {
                   ElevatedButton(
                     onPressed: widget.onPressed,
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.white,
-                      onPrimary: Colors.blueGrey,
+                      foregroundColor: Colors.blueGrey, backgroundColor: Colors.white,
                     ),
                     child: const Padding(
                       padding:
@@ -322,8 +321,7 @@ class _InventoryScreenHeaderState extends State<InventoryScreenHeader> {
                 children: [
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.white,
-                      onPrimary: Colors.blueGrey,
+                      foregroundColor: Colors.blueGrey, backgroundColor: Colors.white,
                     ),
                     onPressed: () => widget.showProductWithLessThan(10),
                     child: const Padding(
@@ -336,8 +334,7 @@ class _InventoryScreenHeaderState extends State<InventoryScreenHeader> {
                     padding: const EdgeInsets.symmetric(horizontal: 10),
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.white,
-                        onPrimary: Colors.blueGrey,
+                        foregroundColor: Colors.blueGrey, backgroundColor: Colors.white,
                       ),
                       onPressed: () => widget.showProductWithLessThan(5),
                       child: const Padding(
@@ -353,8 +350,7 @@ class _InventoryScreenHeaderState extends State<InventoryScreenHeader> {
                 children: [
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.white,
-                      onPrimary: Colors.blueGrey,
+                      foregroundColor: Colors.blueGrey, backgroundColor: Colors.white,
                     ),
                     onPressed: widget.refresh,
                     child: const Padding(
@@ -367,8 +363,7 @@ class _InventoryScreenHeaderState extends State<InventoryScreenHeader> {
                     padding: const EdgeInsets.symmetric(horizontal: 10),
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.red,
-                        onPrimary: Colors.white,
+                        foregroundColor: Colors.white, backgroundColor: Colors.red,
                       ),
                       onPressed: widget.deleteAll,
                       child: const Padding(

@@ -75,8 +75,7 @@ class _StartUpMenuScreenState extends State<StartUpMenuScreen> {
                     Expanded(
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.white,
-                          onPrimary: Colors.blueGrey,
+                          foregroundColor: Colors.blueGrey, backgroundColor: Colors.white,
                           shadowColor: Colors.transparent,
                           shape: BeveledRectangleBorder(
                             borderRadius: BorderRadius.circular(2),
@@ -104,8 +103,7 @@ class _StartUpMenuScreenState extends State<StartUpMenuScreen> {
                       Expanded(
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            primary: Colors.white,
-                            onPrimary: Colors.blueGrey,
+                            foregroundColor: Colors.blueGrey, backgroundColor: Colors.white,
                             shadowColor: Colors.transparent,
                             shape: BeveledRectangleBorder(
                               borderRadius: BorderRadius.circular(2),

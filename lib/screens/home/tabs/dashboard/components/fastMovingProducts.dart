@@ -140,10 +140,7 @@ class _FastMovingProductsState extends State<FastMovingProducts> {
                       children: [
                         ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            primary:
-                                _byCategory ? Colors.blueGrey : Colors.white,
-                            onPrimary:
-                                _byCategory ? Colors.white : Colors.blueGrey,
+                            foregroundColor: _byCategory ? Colors.white : Colors.blueGrey, backgroundColor: _byCategory ? Colors.blueGrey : Colors.white,
                           ),
                           onPressed: byCategoryOnClick,
                           child: const Text('By Category'),
@@ -152,10 +149,7 @@ class _FastMovingProductsState extends State<FastMovingProducts> {
                           padding: const EdgeInsets.only(left: 10),
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              primary:
-                                  _byCategory ? Colors.white : Colors.blueGrey,
-                              onPrimary:
-                                  _byCategory ? Colors.blueGrey : Colors.white,
+                              foregroundColor: _byCategory ? Colors.blueGrey : Colors.white, backgroundColor: _byCategory ? Colors.white : Colors.blueGrey,
                             ),
                             onPressed: byProductOnClick,
                             child: const Text('By Product'),

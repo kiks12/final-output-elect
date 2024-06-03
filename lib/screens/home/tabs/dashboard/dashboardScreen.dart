@@ -76,8 +76,7 @@ class _DashboardScreenHeaderState extends State<DashboardScreenHeader> {
               const HeaderOne(padding: EdgeInsets.all(0), text: 'Dashboard'),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.white,
-                  onPrimary: Colors.blueGrey,
+                  foregroundColor: Colors.blueGrey, backgroundColor: Colors.white,
                 ),
                 onPressed: () {},
                 child: const Padding(

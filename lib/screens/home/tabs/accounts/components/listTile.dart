@@ -123,7 +123,7 @@ class _AccountListTileState extends State<AccountListTile> {
                 padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.blue,
+                    backgroundColor: Colors.blue,
                   ),
                   onPressed: navigateToEditScreen,
                   child: const Padding(
@@ -134,7 +134,7 @@ class _AccountListTileState extends State<AccountListTile> {
               ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.red,
+                  backgroundColor: Colors.red,
                 ),
                 onPressed: showDeleteConfirmationDialog,
                 child: const Padding(

@@ -473,7 +473,7 @@ class _CartState extends State<Cart> {
                       height: MediaQuery.of(context).size.height * 0.06,
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                            primary: Colors.white, onPrimary: Colors.red),
+                            foregroundColor: Colors.red, backgroundColor: Colors.white),
                         onPressed: () => cancelPayment(context),
                         child: const Text('Cancel'),
                       ),
@@ -528,7 +528,7 @@ class _CartState extends State<Cart> {
                       height: MediaQuery.of(context).size.height * 0.06,
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                            primary: Colors.white, onPrimary: Colors.red),
+                            foregroundColor: Colors.red, backgroundColor: Colors.white),
                         onPressed: () => cancelPayment(context),
                         child: const Text('Cancel'),
                       ),
@@ -666,8 +666,7 @@ class _CartState extends State<Cart> {
                     height: MediaQuery.of(context).size.height * 0.05,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.white,
-                        onPrimary: Colors.red,
+                        foregroundColor: Colors.red, backgroundColor: Colors.white,
                       ),
                       onPressed: widget.voidCart,
                       child: const Text('Void'),
