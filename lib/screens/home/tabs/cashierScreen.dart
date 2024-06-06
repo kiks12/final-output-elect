@@ -323,6 +323,7 @@ class _CartState extends State<Cart> {
   TextEditingController cashController = TextEditingController();
   int _change = 0;
   bool _isLoading = false;
+  bool _sufficientFunds = true;
 
   Widget _itemBuilder(BuildContext context, int index) {
     return Container(
@@ -409,6 +410,7 @@ class _CartState extends State<Cart> {
       newTransaction.product.target = product;
       newTransaction.user.target = widget.currentAccount as Account;
 
+      _sufficientFunds = true;
       objectBox.transactionBox.put(newTransaction);
 
       Product updateProduct = objectBox.productBox.get(product.id) as Product;
@@ -443,10 +445,15 @@ class _CartState extends State<Cart> {
                   const Text('Loading...'),
                 ]
               : [
-                  HeaderOne(
-                      padding: const EdgeInsets.symmetric(horizontal: 20),
-                      text:
-                          'Total: ${NumberFormat.currency(symbol: '₱').format(widget.total)}'),
+                  Row(
+                    children: [
+                      HeaderOne(
+                        padding: const EdgeInsets.symmetric(horizontal: 20),
+                        text:
+                            'Total: ${NumberFormat.currency(symbol: '₱').format(widget.total)}'),
+                      Text(_change < 0 || _sufficientFunds ? "Insufficient Funds" : "")
+                    ],
+                  ),
                   Padding(
                     padding: const EdgeInsets.symmetric(
                         horizontal: 20, vertical: 15),
@@ -496,7 +503,7 @@ class _CartState extends State<Cart> {
   }
 
   Future<void> showGCashPaymentDialog(BuildContext context) async {
-    _paymentMethod = 'Cash';
+    _paymentMethod = 'GCash';
 
     Navigator.pop(context);
 
