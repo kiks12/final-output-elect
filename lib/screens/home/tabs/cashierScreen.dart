@@ -414,19 +414,10 @@ class _CartState extends State<Cart> {
       if (amountPaid < totalCharged && index == widget.cartList.length - 1) {
         setState(() {
           _sufficientFunds = false;
-
           _isLoading = false;
         });
         return;
       }
-
-
-      receipt.add([
-        product.name,
-        product.unitPrice,
-        product.quantity,
-        product.totalPrice
-      ]);
 
       _sufficientFunds = true;
       objectBox.transactionBox.put(newTransaction);
