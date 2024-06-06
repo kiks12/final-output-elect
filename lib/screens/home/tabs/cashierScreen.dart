@@ -410,6 +410,24 @@ class _CartState extends State<Cart> {
       newTransaction.product.target = product;
       newTransaction.user.target = widget.currentAccount as Account;
 
+      totalCharged += product.totalPrice;
+      if (amountPaid < totalCharged && index == widget.cartList.length - 1) {
+        setState(() {
+          _sufficientFunds = false;
+
+          _isLoading = false;
+        });
+        return;
+      }
+
+
+      receipt.add([
+        product.name,
+        product.unitPrice,
+        product.quantity,
+        product.totalPrice
+      ]);
+
       _sufficientFunds = true;
       objectBox.transactionBox.put(newTransaction);
 
@@ -451,7 +469,7 @@ class _CartState extends State<Cart> {
                         padding: const EdgeInsets.symmetric(horizontal: 20),
                         text:
                             'Total: ${NumberFormat.currency(symbol: '₱').format(widget.total)}'),
-                      Text(_change < 0 || _sufficientFunds ? "Insufficient Funds" : "")
+                      Text(_change < 0 || !_sufficientFunds ? "Insufficient Funds" : "")
                     ],
                   ),
                   Padding(
