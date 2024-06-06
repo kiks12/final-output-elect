@@ -173,24 +173,6 @@ class _CashierScreenState extends State<CashierScreen> {
     return Scaffold(
       body: Row(
         children: <Widget>[
-          Container(
-            decoration: const BoxDecoration(
-              border: Border(
-                right: BorderSide(color: Colors.blueGrey, width: 0.2),
-              ),
-            ),
-            child: SizedBox(
-              width: MediaQuery.of(context).size.width * 0.3,
-              height: MediaQuery.of(context).size.height,
-              child: Cart(
-                cartList: _cartList,
-                total: _total,
-                voidCart: showVoidCartConfirmationDialog,
-                currentAccount: currentAccount,
-                clearCart: clearCart,
-              ),
-            ),
-          ),
           SizedBox(
             width: MediaQuery.of(context).size.width * 0.69,
             height: MediaQuery.of(context).size.height,
@@ -216,6 +198,24 @@ class _CashierScreenState extends State<CashierScreen> {
                   ),
                 ),
               ],
+            ),
+          ),
+          Container(
+            decoration: const BoxDecoration(
+              border: Border(
+                right: BorderSide(color: Colors.blueGrey, width: 0.2),
+              ),
+            ),
+            child: SizedBox(
+              width: MediaQuery.of(context).size.width * 0.3,
+              height: MediaQuery.of(context).size.height,
+              child: Cart(
+                cartList: _cartList,
+                total: _total,
+                voidCart: showVoidCartConfirmationDialog,
+                currentAccount: currentAccount,
+                clearCart: clearCart,
+              ),
             ),
           )
         ],
