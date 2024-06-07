@@ -398,6 +398,8 @@ class _CartState extends State<Cart> {
       _isLoading = true;
     });
 
+    int totalCharged = 0;
+    int amountPaid = int.parse(cashController.text);
     widget.cartList.asMap().forEach((index, product) async {
       Transaction newTransaction = Transaction(
         transactionID: _transactionID,
